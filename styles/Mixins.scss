@@ -1,0 +1,70 @@
+@import "./Variables.scss";
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    padding: $baseUnit * 3 $baseUnit * 2;
+}
+
+@mixin mq-minw-smobile() {
+    @media screen and (min-width: $breakpoint-xs) {
+        @content;
+    }
+}
+
+@mixin mq-maxw-smobile() {
+    @media screen and (max-width: $breakpoint-xs) {
+        @content;
+    }
+}
+
+@mixin mq-minw-mobile() {
+    @media screen and (min-width: $breakpoint-sm) {
+        @content;
+    }
+}
+
+@mixin mq-maxw-mobile() {
+    @media screen and (max-width: $breakpoint-sm) {
+        @content;
+    }
+}
+
+@mixin mq-minw-tablet() {
+    @media screen and (min-width: $breakpoint-md) {
+        @content;
+    }
+}
+
+@mixin mq-maxw-tablet() {
+    @media screen and (max-width: $breakpoint-md) {
+        @content;
+    }
+}
+
+@mixin mq-minw-sscreen() {
+    @media screen and (min-width: $breakpoint-lg) {
+        @content;
+    }
+}
+
+@mixin mq-maxw-sscreen() {
+    @media screen and (max-width: $breakpoint-lg) {
+        @content;
+    }
+}
+
+@mixin mq-minw-screen() {
+    @media screen and (min-width: $breakpoint-xl) {
+        @content;
+    }
+}
+
+@mixin mq-maxw-screen() {
+    @media screen and (max-width: $breakpoint-xl) {
+        @content;
+    }
+}

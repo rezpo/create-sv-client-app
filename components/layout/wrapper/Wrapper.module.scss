@@ -1,0 +1,14 @@
+@import "../../../styles/Mixins.scss";
+@import "../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(column, center, center);
+    width: 100%;
+    background-color: $whiteColor;
+    border-radius: $baseUnit * 2;
+    color: $blackColor;
+
+    @include mq-maxw-mobile {
+        padding: $baseUnit;
+    }
+}
