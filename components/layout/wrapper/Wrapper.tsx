@@ -1,11 +1,36 @@
+import React from "react";
 import styles from "./Wrapper.module.scss";
+import Head from "next/head";
 
 export interface WrapperInterface {
+    title: string;
+    metaProperty: string;
+    metaContent: string;
+    metaKey: string;
     children: React.ReactNode;
 }
 
-const Wrapper: React.FC<WrapperInterface> = ({ children }) => {
-    return <main className={styles.wrapper}>{children}</main>;
+const Wrapper = ({
+    title,
+    metaProperty,
+    metaContent,
+    metaKey,
+    children,
+}: Partial<WrapperInterface>) => {
+    return (
+        <>
+            <Head>
+                <title>{title}</title>
+                <meta
+                    property={metaProperty}
+                    content={metaContent}
+                    key={metaKey}
+                />
+                {children}
+            </Head>
+            <main>{children}</main>
+        </>
+    );
 };
 
 export default Wrapper;

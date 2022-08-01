@@ -1,3 +1,25 @@
+// Spacing
+$paddingX-xs: 2px 5px;
+$paddingX-sm: 4px 10px;
+$paddingX-md: 8px 20px;
+$paddingX-lg: 16px 25px;
+$paddingX-xl: 24px 30px;
+$paddingY-xs: 5px 2px;
+$paddingY-sm: 10px 4px;
+$paddingY-md: 20px 8px;
+$paddingY-lg: 25px 16px;
+$paddingY-xl: 30px 24px;
+
+
+// Font
+$fontSize: 14px;
+$fontSize-xs: $fontSize - 4;
+$fontSize-sm: $fontSize - 2;
+$fontSize-md: $fontSize + 2;
+$fontSize-lg: $fontSize + 4;
+$fontSize-xl: $fontSize * 1.5;
+$fontSize-xxl: $fontSize * 2;
+
 // Sizes and dimensions
 $baseUnit: 8px;
 $breakpoint-xs: 375px;
@@ -8,8 +30,8 @@ $breakpoint-xl: 1600px;
 
 // Colors
 $whiteColor: #ffffff;
-$blackColor: #000000;
-$primaryColor: #000000;
-$secondaryColor: #ffffff;
-$tertiaryColor: #ffffff;
-$quaternaryColor: #ffffff;
+$blackColor: #1a1a1a;
+$primaryColor: #fdb924;
+$secondaryColor: #00a5e5;
+$tertiaryColor: #671e7d;
+$quaternaryColor: #8dc63f;

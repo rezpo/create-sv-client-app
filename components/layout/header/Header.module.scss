@@ -1,0 +1,11 @@
+@import "../../../styles/Mixins.scss";
+@import "../../../styles/Variables.scss";
+
+.header {
+    @include flex(column, center, space-around);
+    width: 100%;
+    padding: $paddingX-xs;
+    background-color: $blackColor;
+    color: $whiteColor;
+    font-size: $fontSize-sm;
+}

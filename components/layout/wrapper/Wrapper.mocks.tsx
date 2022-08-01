@@ -25,6 +25,10 @@ const children = () => (
 );
 
 const base: WrapperInterface = {
+    title: "Layout/Wrapper",
+    metaProperty: "description",
+    metaContent: "This is just an example of a  Layout/Wrapper",
+    metaKey: "title",
     children: children(),
 };
 
