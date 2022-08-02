@@ -1,4 +1,9 @@
 // Spacing
+$padding-xs: 5px;
+$padding-sm: 10px;
+$padding-md: 20px;
+$padding-lg: 25px;
+$padding-xl: 30px;
 $paddingX-xs: 2px 5px;
 $paddingX-sm: 4px 10px;
 $paddingX-md: 8px 20px;
@@ -31,7 +36,17 @@ $breakpoint-xl: 1600px;
 // Colors
 $whiteColor: #ffffff;
 $blackColor: #1a1a1a;
+$grayColor: #aaaaaa;
+$grayColor-light: #d3d3d3;
+$grayColor-dark: #8d8d8d;
 $primaryColor: #fdb924;
 $secondaryColor: #00a5e5;
 $tertiaryColor: #671e7d;
 $quaternaryColor: #8dc63f;
+
+// Border radius
+$borderRadius: $baseUnit;
+$borderRadius-xs: $borderRadius - 4px;
+$borderRadius-sm: $borderRadius - 2px;
+$borderRadius-md: $borderRadius * 2;
+$borderRadius-lg: $borderRadius * 3;

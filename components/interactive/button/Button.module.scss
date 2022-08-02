@@ -1,0 +1,157 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins.scss";
+
+.button {
+    @include flex(row, center, center);
+    width: max-content;
+    font-size: $fontSize-sm;
+    border-radius: $borderRadius;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &Variant {
+        &_contained {
+            background-color: $primaryColor;
+        }
+        &_outlined {
+            background-color: transparent;
+        }
+        &_text {
+            background-color: transparent;
+
+            * {
+                color: $blackColor;
+            }
+        }
+    }
+
+    &Disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background-color: $grayColor-light;
+        border-color: $grayColor-light;
+    }
+
+    &BGColor {
+        &_primary {
+            background-color: $primaryColor;
+            border-color: $primaryColor;
+
+            &:hover {
+                background-color: darken($color: $primaryColor, $amount: 5);
+                border-color: darken($color: $primaryColor, $amount: 5);
+            }
+
+            * {
+                color: $blackColor;
+            }
+        }
+        &_secondary {
+            background-color: $secondaryColor;
+            border-color: $secondaryColor;
+
+            &:hover {
+                background-color: darken($color: $secondaryColor, $amount: 5);
+                border-color: darken($color: $secondaryColor, $amount: 5);
+            }
+
+            * {
+                color: $whiteColor;
+            }
+        }
+        &_tertiary {
+            background-color: $tertiaryColor;
+            border-color: $tertiaryColor;
+
+            &:hover {
+                background-color: darken($color: $tertiaryColor, $amount: 5);
+                border-color: darken($color: $tertiaryColor, $amount: 5);
+            }
+
+            * {
+                color: $whiteColor;
+            }
+        }
+        &_black {
+            background-color: $blackColor;
+            border-color: $blackColor;
+
+            &:hover {
+                background-color: darken($color: $blackColor, $amount: 5);
+                border-color: darken($color: $blackColor, $amount: 5);
+            }
+
+            * {
+                color: $whiteColor;
+            }
+        }
+        &_white {
+            background-color: $whiteColor;
+            border-color: $whiteColor;
+
+            &:hover {
+                background-color: darken($color: $whiteColor, $amount: 5);
+                border-color: darken($color: $whiteColor, $amount: 5);
+            }
+
+            * {
+                color: $blackColor;
+            }
+        }
+    }
+
+    &BorderColor {
+        &_primary {
+            border-color: $primaryColor;
+
+            &:hover {
+                border-color: $blackColor;
+            }
+        }
+        &_secondary {
+            border-color: $secondaryColor;
+
+            &:hover {
+                border-color: $blackColor;
+            }
+        }
+        &_tertiary {
+            border-color: $tertiaryColor;
+
+            &:hover {
+                border-color: $blackColor;
+            }
+        }
+        &_black {
+            border-color: $blackColor;
+
+            &:hover {
+                border-color: $blackColor;
+            }
+        }
+        &_white {
+            border-color: $whiteColor;
+
+            &:hover {
+                border-color: darken($color: $whiteColor, $amount: 5);
+            }
+        }
+    }
+
+    &Size {
+        &_small {
+            font-size: $fontSize-sm;
+            padding: $paddingX-md;
+        }
+        &_medium {
+            font-size: $fontSize-md;
+            padding: $paddingX-md;
+        }
+        &_large {
+            font-size: $fontSize-lg;
+            padding: $paddingX-lg;
+        }
+    }
+}

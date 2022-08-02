@@ -7,7 +7,8 @@ const children = () => {
                 Reprehenderit do adipisicing voluptate consectetur.
             </span>
             <span>
-                Laborum amet dolore nisi amet commodo ut consectetur proident fugiat.
+                Laborum amet dolore nisi amet commodo ut consectetur proident
+                fugiat.
             </span>
         </>
     );

@@ -26,9 +26,8 @@ const Wrapper = ({
                     content={metaContent}
                     key={metaKey}
                 />
-                {children}
             </Head>
-            <main>{children}</main>
+            <main className={styles.wrapper}>{children}</main>
         </>
     );
 };

@@ -1,0 +1,19 @@
+@import "./Mixins.scss";
+@import "./Variables.scss";
+
+.border {
+    &Rounded {
+        &_sm {
+            border-radius: $baseUnit;
+        }
+        &_md {
+            border-radius: $baseUnit * 1.25;
+        }
+        &_lg {
+            border-radius: $baseUnit * 2.5;
+        }
+        &_full {
+            border-radius: 999rem;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/Global.scss";
 import * as NextImage from "next/image";
 
 const BREACKPOINTS = {

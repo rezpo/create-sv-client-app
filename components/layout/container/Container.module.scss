@@ -1,0 +1,40 @@
+@import "@styles/Mixins.scss";
+@import "@styles/Variables.scss";
+
+.container {
+    padding: $padding-md;
+    background-color: $whiteColor;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 80%;
+        background-color: inherit;
+        opacity: 0.1;
+        box-shadow: 0 10px 30px $secondaryColor;
+        z-index: -1;
+        filter: blur(30);
+        border-radius: 999rem;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 80%;
+        background-color: inherit;
+        opacity: 0.1;
+        box-shadow: 0 10px 30px $secondaryColor;
+        z-index: -1;
+        filter: blur(30);
+        border-radius: 999rem;
+    }
+}
