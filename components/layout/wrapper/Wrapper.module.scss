@@ -4,6 +4,8 @@
 .wrapper {
     @include flex(column, center, center);
     width: 100%;
+    // position: relative;
+    // z-index: -9999;
 
     @include mq-maxw-mobile {
         padding: $baseUnit;

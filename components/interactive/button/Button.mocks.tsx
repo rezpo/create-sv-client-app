@@ -7,6 +7,7 @@ const base: ButtonInterface = {
     color: "primary",
     size: "medium",
     disabled: false,
+    testId: "baseButton",
 };
 
 export const mockButtonProps = { base };

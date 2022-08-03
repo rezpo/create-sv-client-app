@@ -9,18 +9,26 @@ export interface ButtonInterface {
     color?: "primary" | "secondary" | "tertiary" | "black" | "white";
     size?: "small" | "medium" | "large";
     disabled?: boolean;
+    testId?: string;
+    leftIcon?: React.ReactNode;
+    rightIcon?: React.ReactNode;
+    loading?: boolean;
     onClick?: (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 const Button = ({
+    onClick,
     type,
     text,
     classes,
     variant,
     color,
     size,
-    disabled,
-    onClick,
+    leftIcon,
+    rightIcon,
+    loading = false,
+    disabled = false,
+    testId = "button",
 }: ButtonInterface) => {
     const setVariant = () => {
         switch (variant) {
@@ -85,6 +93,7 @@ const Button = ({
     return (
         <button
             type={type}
+            data-testid={testId}
             className={`
                 ${styles.button}
                 ${setVariant()}
@@ -92,14 +101,17 @@ const Button = ({
                 ${
                     variant !== "text" &&
                     !disabled &&
+                    !loading &&
                     (variant === "outlined" ? setBorderColor() : setBGColor())
                 }
-                ${disabled ? styles.buttonDisabled : ""}
+                ${disabled || loading ? styles.buttonDisabled : ""}
                 ${classes ? classes : ""}`}
             onClick={onClick}
-            disabled={disabled}
+            disabled={disabled || loading}
         >
+            {leftIcon}
             <span>{text}</span>
+            {rightIcon}
         </button>
     );
 };

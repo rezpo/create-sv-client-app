@@ -8,6 +8,8 @@ export interface WrapperInterface {
     metaContent: string;
     metaKey: string;
     children: React.ReactNode;
+    classes: string;
+    dataTestId?: string;
 }
 
 const Wrapper = ({
@@ -16,6 +18,8 @@ const Wrapper = ({
     metaContent,
     metaKey,
     children,
+    classes,
+    dataTestId = "wrapper",
 }: Partial<WrapperInterface>) => {
     return (
         <>
@@ -27,7 +31,12 @@ const Wrapper = ({
                     key={metaKey}
                 />
             </Head>
-            <main className={styles.wrapper}>{children}</main>
+            <main
+                data-testid={dataTestId}
+                className={`${styles.wrapper} ${classes}`}
+            >
+                {children}
+            </main>
         </>
     );
 };

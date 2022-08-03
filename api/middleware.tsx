@@ -9,6 +9,8 @@ type Props = {
     onError: (_error: any) => void;
 };
 
+export const status = { startCall: false, calling: false, callEnds: false };
+
 export const runRequest = async ({
     url,
     method,
@@ -17,7 +19,8 @@ export const runRequest = async ({
     onSuccess,
     onError,
 }: Props) => {
-    let loading = true;
+    status.startCall = true;
+    status.calling = true;
 
     try {
         const response = await axios({
@@ -28,12 +31,16 @@ export const runRequest = async ({
             data,
         });
 
-        onSuccess(response.data);
-        loading = false;
-    } catch (error) {
-        onError(error);
-        loading = false;
-    }
+        status.startCall = false;
+        status.calling = false;
+        status.callEnds = true;
 
-    return { loading };
+        onSuccess(response.data);
+    } catch (error) {
+        status.startCall = false;
+        status.calling = false;
+        status.callEnds = true;
+
+        onError(error);
+    }
 };

@@ -1,0 +1,17 @@
+@import "@styles/Mixins.scss";
+@import "@styles/Variables.scss";
+
+.container {
+    height: 100vh;
+    background-color: $primaryColor;
+}
+
+.textBox {
+    width: 600px;
+}
+
+.interactiveBox {
+    @include flex(row, center, center);
+    margin-top: $baseUnit * 2;
+    gap: $baseUnit * 2;
+}

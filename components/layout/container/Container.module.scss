@@ -16,7 +16,7 @@
         height: 80%;
         background-color: inherit;
         opacity: 0.1;
-        box-shadow: 0 10px 30px $secondaryColor;
+        box-shadow: 0 10px 30px $blackColor;
         z-index: -1;
         filter: blur(30);
         border-radius: 999rem;
@@ -32,9 +32,13 @@
         height: 80%;
         background-color: inherit;
         opacity: 0.1;
-        box-shadow: 0 10px 30px $secondaryColor;
+        box-shadow: 0 10px 30px $blackColor;
         z-index: -1;
         filter: blur(30);
         border-radius: 999rem;
+    }
+
+    &_rounded {
+        border-radius: $borderRadius-md;
     }
 }

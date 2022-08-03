@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Container.module.scss";
-import brand from "@styles/Brand.module.scss";
 
 export interface ContainerInterface {
     children: React.ReactNode;
@@ -16,7 +15,7 @@ const Container = ({
     return (
         <div
             className={`${styles.container} ${
-                rounded && brand.borderRounded_sm
+                rounded && styles.container_rounded
             } ${classes}`}
         >
             {children}

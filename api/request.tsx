@@ -1,20 +1,19 @@
-import { runRequest } from "./middleware";
+import { runRequest, status } from "./middleware";
 
 export const getUsers = async () => {
     let data;
     let errors;
 
-    const { loading } = await runRequest({
+    await runRequest({
         url: "/users",
         method: "GET",
         onSuccess: (response: any) => {
-            console.log(response);
-            data = response.data;
+            data = response;
         },
         onError: (error: any) => {
             errors = error;
         },
     });
 
-    return { loading, data, errors };
+    return { data, errors, status };
 };
